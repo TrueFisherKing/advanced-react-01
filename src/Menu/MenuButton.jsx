@@ -3,15 +3,20 @@ import Button from "../Button/Button"
 import { MenuContext } from "./Menu"
 
 export default function MenuButton({ children }) {
-
-    const { open, toggle, menuId } = React.useContext(MenuContext)
+    const { menuId, open, setOpen } = React.useContext(MenuContext)
+    
+    function toggle() {
+        setOpen(prevOpen => !prevOpen)
+    }
 
     return (
         <Button
-            onClick={toggle}
+            aria-controls={menuId}
             aria-expanded={open}
             aria-haspopup="true"
-            aria-controls={menuId}
+            onClick={toggle}
+            size="lg"
+            variant={"success"}
         >
             {children}
         </Button>
