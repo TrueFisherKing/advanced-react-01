@@ -8,11 +8,12 @@ function App() {
   return (
     <>
 
-      <Star />
+      <Star onChange={() => { console.log("hello") }} />
 
       <br />
-      
-      <Menu>
+
+      <Menu onChange={()=>{console.log("From App Menu");
+      }}>
         <Menu.Button>Sports</Menu.Button>
         <Menu.Dropdown>
           {sports.map(sport => (

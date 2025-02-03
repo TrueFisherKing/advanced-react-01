@@ -3,12 +3,12 @@ import Toggle from "../Toggle/"
 
 const MenuContext = React.createContext()
 
-export default function Menu({ children }) {
+export default function Menu({ children, onChange = ()=>{} }) {
 
     const menuId = React.useId()
 
     return (
-        <Toggle>
+        <Toggle onToggle={onChange}>
             <MenuContext.Provider value={menuId}>
                 <div className="menu" role="menu">
                     {children}
