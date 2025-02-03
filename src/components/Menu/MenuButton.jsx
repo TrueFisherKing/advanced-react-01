@@ -9,7 +9,6 @@ export default function MenuButton({ children }) {
 
     return (
         <Toggle.Button>
-
             <Button
                 aria-controls={menuId}
                 aria-expanded={on}

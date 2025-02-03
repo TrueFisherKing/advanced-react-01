@@ -12,6 +12,24 @@ body {
   margin-top: 40px;
   font-family: Inter;
 }
+#root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.star {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: color .5s ease-in-out;
+    user-select: none;
+    color: white;
+}
+
+.star.filled {
+    color: orange;
+}
 
 button {
   background-color: #E5E7EB;
