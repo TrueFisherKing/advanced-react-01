@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import Menu from "./Menu/"
 
 function App() {
@@ -15,5 +15,4 @@ function App() {
     </Menu>
   )
 }
-
 export default App
